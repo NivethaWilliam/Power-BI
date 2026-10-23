@@ -1,154 +1,108 @@
 
-<div align="center">
-
-# 📊 Excel Assignment 1: Data Exploration
-
-### By Nivetha William
-
-**Microsoft Excel | Data Analysis | Excel Formulas | Data Cleaning**
-
-![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
-![Data Analysis](https://img.shields.io/badge/Data_Analysis-1565C0?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
-
-</div>
-
----
+# 📊 Power BI Assignment 1: Data Transformation & Data Modeling
 
 ## 📌 Project Overview
 
-This project focuses on exploring and analyzing a product dataset using Microsoft Excel. The assignment demonstrates essential Excel functions for numerical analysis, conditional categorization, and text extraction.
-
-The objective is to develop practical Excel skills and understand how spreadsheet formulas can transform raw data into meaningful business insights.
+This project demonstrates data transformation and data modeling using Microsoft Power BI. The assignment focuses on organizing sales-related datasets, preparing data for analysis, and structuring relationships between tables to support meaningful reporting and business insights.
 
 ## 🎯 Objectives
 
-- Calculate summary statistics using Excel formulas.
-- Identify minimum and maximum product prices.
-- Categorize products based on their price.
-- Analyze product prices using conditional functions.
-- Extract useful information from Product IDs using text functions.
+- Import and organize multiple datasets in Power BI.
+- Clean and transform data using Power Query.
+- Prepare structured datasets for analysis.
+- Build a data model using relevant tables and relationships.
+- Organize order details, sales summaries, and sales targets.
+- Create a foundation for interactive business intelligence reports.
 
-## 📂 Dataset Description
+## 🛠️ Tools & Technologies
 
-The dataset contains product information, including:
+- Microsoft Power BI Desktop
+- Power Query Editor
+- Data Transformation
+- Data Modeling
+- Table Relationships
+- DAX (Data Analysis Expressions), where applicable
+- Business Intelligence and Data Visualization
 
-| Column | Description |
+## 📂 Data Model Tables
+
+The Power BI project includes the following tables:
+
+| Table Name | Purpose |
 |---|---|
-| Day | Day extracted from Product ID |
-| Country Code | Country identifier extracted from Product ID |
-| Month | Month abbreviation extracted from Product ID |
-| Product ID | Unique product identifier |
-| Product Name | Name of the product |
-| Brand Name | Brand associated with the product |
-| Price ($) | Product price in dollars |
-| Quantity | Product quantity |
-| Category | Product category |
-| Price Range | Product price classification |
+| List of Orders | Contains order-list information. |
+| Order Details | Stores detailed information about individual orders. |
+| Sales Target | Contains sales target information. |
+| Order Summary | Supports consolidated order analysis. |
+| Order Data | Provides order-related data for reporting. |
+| Sales Summary | Supports summarized sales analysis. |
 
-## 🛠️ Excel Functions Used
+## 🔄 Data Transformation Process
 
-### 1. SUM, COUNT, and AVERAGE
+1. **Data Import:** Load the required datasets into Power BI.
+2. **Data Cleaning:** Check for missing values, duplicates, and inconsistent data.
+3. **Data Transformation:** Apply appropriate data types, rename columns, and prepare fields for analysis.
+4. **Data Preparation:** Structure the transformed data for use in the data model.
+5. **Data Validation:** Check data consistency and verify the transformed tables.
 
-Used to calculate the total price, number of products, and average product price.
+## 🧩 Data Modeling
 
-```excel
-=SUM(G2:G35)
-=COUNT(G2:G35)
-=AVERAGE(G2:G35)
-```
+The data model organizes order and sales information into related tables.
 
-### 2. MIN and MAX
+Key activities include:
 
-Used to identify the lowest and highest product prices.
+- Identifying common columns between tables.
+- Establishing appropriate relationships.
+- Reviewing relationship cardinality and filter direction.
+- Reducing unnecessary duplication where appropriate.
+- Preparing tables for accurate reporting and analysis.
 
-```excel
-=MIN(G2:G35)
-=MAX(G2:G35)
-```
+## 📈 Business Analysis Opportunities
 
-### 3. IF Function
+The prepared model can support analysis of:
 
-Created a `Price Range` column to categorize products priced at $500 or above as High Price and the remaining products as Standard Price.
+- Sales performance
+- Order summaries
+- Sales targets versus actual performance
+- Order-level details
+- Sales trends and comparisons
 
-```excel
-=IF(G2>=500,"High Price","Standard Price")
-```
+*Note: These are potential analytical uses of the model, not claims about specific report results.*
 
-### 4. SUMIF and COUNTIF
+## 🚀 How to Use This Project
 
-Calculated the total price of products in the Electronics category and counted products priced below $100.
+1. Clone or download this repository.
+2. Download the `.pbix` file.
+3. Open the file using Power BI Desktop.
+4. Navigate to **Transform data** to review Power Query steps.
+5. Open **Model view** to explore the table relationships.
+6. Explore the report pages and available visualizations.
 
-```excel
-=SUMIF(I2:I35,"Electronics",G2:G35)
-=COUNTIF(G2:G35,"<100")
-```
+## 📁 Project File
 
-### 5. Text Functions: LEFT, RIGHT, and MID
+`Power BI Assignment 1 – Data Transformation & Data Modeling.pbix`
 
-Extracted the day, country code, and month from the Product ID.
+## 💡 Skills Demonstrated
 
-**Extract Day:**
+- Power BI Desktop
+- Power Query and ETL concepts
+- Data cleaning and transformation
+- Data modeling and relationships
+- Sales data preparation
+- Business intelligence fundamentals
+- Analytical thinking and problem-solving
 
-```excel
-=LEFT(D2,2)
-```
+## ⚠️ Disclaimer
 
-**Extract Country Code:**
+This project is created for educational and assignment purposes. The accuracy of insights depends on the quality, completeness, and correctness of the source data.
 
-```excel
-=RIGHT(D2,2)
-```
+## 👩‍💻 Author
 
-**Extract Month:**
+**Your Name**
 
-```excel
-=MID(D2,4,3)
-```
-
-## 📈 Key Results
-
-Based on the uploaded dataset:
-
-| Analysis | Result |
-|---|---:|
-| Total product price | $10,100 |
-| Number of products | 34 |
-| Average product price | $297.06 |
-| Minimum product price | $30 |
-| Maximum product price | $1,000 |
-| Total price of Electronics products | $8,050 |
-| Products priced below $100 | 11 |
-| Products classified as High Price | 8 |
-
-*Note: The total product price is the sum of listed product prices, not the total inventory value calculated using quantity.*
-
-## 💡 Key Learnings
-
-- Applied Excel formulas to perform numerical analysis.
-- Used conditional logic to classify products.
-- Analyzed product data using SUMIF and COUNTIF.
-- Extracted structured information from text using LEFT, RIGHT, and MID.
-- Improved data exploration and spreadsheet problem-solving skills.
-
-## 🧰 Tools & Technologies
-
-- **Microsoft Excel**
-- Excel formulas and functions
-- Data exploration and analysis
-- Product data categorization
-- Text manipulation
-
-## 🚀 Conclusion
-
-This assignment strengthened my understanding of Microsoft Excel and its application in data analysis. By using mathematical, conditional, and text functions, I transformed product data into structured information and generated useful summary insights.
-
-This project is part of my journey toward becoming a **Data Analyst**, building practical skills in Excel, SQL, Power BI, and business analytics.
+- GitHub: [Your GitHub Profile](https://github.com/your-username)
+- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/)
 
 ---
 
-<div align="center">
-
-**Learning Excel. Exploring Data. Building Analytical Skills. 🚀**
-
-</div>
+⭐ If you find this project useful, feel free to star the repository!
